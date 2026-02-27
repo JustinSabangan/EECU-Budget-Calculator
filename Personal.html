@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Personal.css">
+    <title>EECU Budget Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <div class="Header">
         <img src="" alt="" id="EECU-Logo">
         <img src="" alt="" id="Menu">
@@ -16,43 +18,38 @@
     <h3>Budget Calculator</h3>
 
     <main>
-    
-        <div class="Steps">
-            <div id="Step1"><p>1</p></div>
-            <div id="Step2"><p>2</p></div>
-            <div id="Step3"><p>3</p></div>
-            <div id="Step4"><p>4</p></div>
-            <div id="Step5"><p>5</p></div>
-            <div id="Step6"><p>6</p></div>
-        </div>
-
-        <section class="Monthly-Income-Info">
-            <p>Monthly Income</p>
-            <div id="line"></div>
-            <p>Housing</p>
-            <p>Transportation</p>
-            <p>Education</p>
-            <p>Personal</p>
-            <p>Savings</p>
-
-            <div id="Pie-chart">
-
+        <section class="inputs">
+            <div class="progressBar">
+                <a href="#"><button id="stepOne">1</button></a>
+                <a href="Housing.html"><button id="stepTwo">2</button></a>
+                <a href="Transportation.html"></a><button id="stepThree">3</button></a>
+                <a href="Education.html"></a><button id="stepFour">4</button></a>
+                <a href="Personal.html"></a><button id="stepFive">5</button></a>
+                <a href="Savings.html"></a><button id="stepSix">6</button></a>
             </div>
-        </section>
+            <section class="Piechart-legend">
+                <div id="Pie-chart">
+                    <section class="Piechart">
 
-        <section class="Personal">
-            <h1>Personal</h1>
-            <input type="text" id="SalaryOrWages" placeholder="Groceries">
-            <input type="text" id="SideIncome" placeholder="Groceries">
-            <input type="text" id="Benefits" placeholder="Entertainment">
-            <input type="text" id="Benefits" placeholder="Medical">
-            <input type="text" id="Add-Custom-Item" placeholder="Add Custom Item">
-            <button>+ Add</button>
-        </section>
+                    </section>
+                </div>
+            </section>
 
+            <section class="income">
+                <h2> Monthly Income</h2>
+                <form action="">
+                    <input type="text" placeholder="Groceries">
+                    <input type="text" placeholder="Clothing">
+                    <input type="text" placeholder="Entertainment">
+                    <input type="text" placeholder="Medical">
+                    <input type="text" placeholder="Add Custom Item">
+                    <button>+ Add</button>
+                </form>
+            </section>
 
-        <button>Continue</button>
+            <button>Continue</button>
     </main>
 
 </body>
+
 </html>

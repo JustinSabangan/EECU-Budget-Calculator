@@ -1,0 +1,11 @@
+body {
+    display: flex;   
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.inputs > .progressBar > button{
+    margin: 1em;
+}
