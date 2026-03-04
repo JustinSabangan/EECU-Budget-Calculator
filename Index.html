@@ -10,22 +10,20 @@
 
 <body>
 
-    <nav class="header">
+    <nav>
         <img src="eecu-logo.png" id="EECU-Logo">
         <h3>Budget Calculator</h3>
     </nav>
-
-<!---->
     <main>
-        <section class="inputs">
-            <div class="progressBar">
-                <a href="#"><button class="stepOne">1</button></a>
-                <a href="Housing.html"><button class="stepTwo">2</button></a>
-                <a href="Transportation.html"></a><button class="stepThree">3</button></a>
-                <a href="Education.html"></a><button class="stepFour">4</button></a>
-                <a href="Personal.html"></a><button class="stepFive">5</button></a>
-                <a href="Savings.html"></a><button class="stepSix">6</button></a>
-            </div>
+        <ul class="progressBar">
+            <a href="#"><button class="stepOne">1</button></a>
+            <a href="Housing.html"><button class="stepTwo">2</button></a>
+            <a href="Transportation.html"></a><button class="stepThree">3</button></a>
+            <a href="Education.html"></a><button class="stepFour">4</button></a>
+            <a href="Personal.html"></a><button class="stepFive">5</button></a>
+            <a href="Savings.html"></a><button class="stepSix">6</button></a>
+        </ul>
+        <section class="bottom-side">
             <section class="Piechart-legend">
                 <div id="Pie-chart">
                     <section class="Piechart">
@@ -36,20 +34,26 @@
 
             <section class="income">
                 <h2> Monthly Income</h2>
-                <form id="income-form"action="">
+                <form id="income-form" action="">
                     <input type="text" placeholder="Gross Annual income">
                     <input type="text" placeholder="Career Selection">
-                    <input type="text" placeholder="Salary/Wages">
-                    <input type="text" placeholder="Side Income">
-                    <input type="text" placeholder="Benefits">
-                    <input type="text" placeholder="Add Custom Item">
+                    <section class="income-section1">
+                        <input type="text" placeholder="Salary/Wages">
+                        <input type="text" placeholder="Side Income">
+                    </section>
+                    <section class="income-section2">
+                        <input type="text" placeholder="Benefits">
+                        <input type="text" placeholder="Add Custom Item">
+                    </section>
                     <button id="secondary-button">+ Add</button>
                 </form>
-                <!--Put button and a href in one section and do display flex and flex direction row, and justify content flex-end and have a gap between them like in the Figma file.-->
+            </section>
+            <section class="right-side">
                 <a href="Housing.html" id="primary-buttons">Continue</a>
             </section>
-
+        </section>
     </main>
+
 
 </body>
 
