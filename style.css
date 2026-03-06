@@ -1,7 +1,8 @@
 :root {
     --primary-color: #0A5AA7;
     --secondary-color: #F2F2F2;
-    font-family: Arial, Helvetica, sans-serif;
+    --font-family: Arial, Helvetica, sans-serif;
+    --Border-Radius: 10px;
 }
 
 * {
@@ -19,7 +20,27 @@ main {
     width: 95%;
     margin-top: 2em;
     margin-left: 2.5%;
-    padding:10px
+    padding: 10px;
+    font-family: var(--font-family);
+    height: 38vw;
+}
+
+.inputs>.progressBar {
+    display: flex;
+    gap: 50px;
+}
+
+.inputs>.progressBar>a {
+    text-decoration: none;
+}
+
+.inputs>.progressBar>a>button {
+    border: 0px;
+    background-color: var(--secondary-color);
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    border: 3px solid grey;
 }
 
 nav {
@@ -53,6 +74,7 @@ nav {
     width: 100%;
     padding: 1em;
 }
+
 .progressBar {
     display: flex;
     flex-direction: row;
@@ -60,8 +82,8 @@ nav {
     background-color: var(--secondary-color);
     width: 100%;
     padding: 1em;
-
-    & > a {
+    
+    &>a {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -94,19 +116,37 @@ nav {
 }
 
 #secondary-button {
-    background-color: #55A8F8;
+    background-color: var(--primary-color);
     color: var(--secondary-color);
     border-radius: 10px;
     padding: 0.5rem;
     border: none;
 }
 
+
+
 /* Put Flex direction on the slip two buttons*/
+
+#secondary-button {
+    margin-left: 13vw;
+}
+
 .income-section1 {
     display: flex;
     flex-direction: row;
     align-items: space-between;
     gap: 1em;
+
+    & input {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5em;
+        margin: 0.5em 0;
+        background: #FFF;
+        border: 2px solid #A5A5A5;
+        border-radius: 10px;
+        width: 14.3vw;
+    }
 }
 
 .income-section2 {
@@ -114,6 +154,16 @@ nav {
     flex-direction: row;
     align-items: space-between;
     gap: 1em;
+    & input {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5em;
+        margin: 0.5em 0;
+        background: #FFF;
+        border: 2px solid #A5A5A5;
+        border-radius: 10px;
+        width: 14.3vw;
+    }
 }
 
 .right-side {
@@ -121,3 +171,10 @@ nav {
     justify-content: flex-end;
     align-items: flex-end;
 }
+
+/* 
+Align/center everything
+add hover for "+ add" button and "continue" button
+Add hover for progress bar
+be careful of html try and fix it because it will only mess up CSS selectors
+*/
