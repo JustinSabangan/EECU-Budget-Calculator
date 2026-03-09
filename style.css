@@ -12,7 +12,7 @@
 }
 
 main {
-    background-color: #F0F0F0;
+    background-color: var(--secondary-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
@@ -22,25 +22,44 @@ main {
     margin-left: 2.5%;
     padding: 10px;
     font-family: var(--font-family);
-    height: 38vw;
+    height: fit-content;
 }
 
 .inputs>.progressBar {
     display: flex;
-    gap: 50px;
 }
 
 .inputs>.progressBar>a {
     text-decoration: none;
+
+    &:not(:first-child)::before {
+        content: "";
+        width: 2em;
+        border: 2px solid #A5A5A5;
+    }
+
+    &.active:not(:first-child)::before {
+        border: 3px solid var(--primary-color);
+    }
+
+    &.active>button {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: var(--secondary-color);
+    }
 }
 
 .inputs>.progressBar>a>button {
     border: 0px;
     background-color: var(--secondary-color);
-    width: 4vw;
-    height: 4vw;
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
     border: 3px solid grey;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 nav {
@@ -70,7 +89,7 @@ nav {
 .bottom-side {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     padding: 1em;
 }
@@ -82,11 +101,10 @@ nav {
     background-color: var(--secondary-color);
     width: 100%;
     padding: 1em;
-    
+
     &>a {
         display: flex;
         align-items: center;
-        gap: 20px;
 
     }
 }
@@ -113,6 +131,8 @@ nav {
     padding: 0.5rem;
     border: none;
     text-decoration: none;
+    width: 5em;
+    text-align: center;
 }
 
 #secondary-button {
@@ -134,7 +154,7 @@ nav {
 .income-section1 {
     display: flex;
     flex-direction: row;
-    align-items: space-between;
+    align-items: space-around;
     gap: 1em;
 
     & input {
@@ -152,8 +172,9 @@ nav {
 .income-section2 {
     display: flex;
     flex-direction: row;
-    align-items: space-between;
+    align-items: space-around;
     gap: 1em;
+
     & input {
         display: flex;
         flex-direction: column;
