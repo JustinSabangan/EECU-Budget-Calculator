@@ -17,12 +17,18 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     width: 95%;
     margin-top: 2em;
     margin-left: 2.5%;
     padding: 10px;
     font-family: var(--font-family);
-    height: 38vw;
+    height: vw;
+}
+
+.income h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 .inputs>.progressBar {
@@ -75,6 +81,8 @@ nav {
     padding: 1em;
 }
 
+
+
 .progressBar {
     display: flex;
     flex-direction: row;
@@ -82,7 +90,7 @@ nav {
     background-color: var(--secondary-color);
     width: 100%;
     padding: 1em;
-    
+
     &>a {
         display: flex;
         align-items: center;
@@ -91,6 +99,8 @@ nav {
     }
 }
 
+
+/* --MAKE BUTTONS BIGGER PLEASE SO IT CAN FIT THE WHOLE PAGE-- */
 .income>form>input {
     display: flex;
     flex-direction: column;
@@ -99,71 +109,81 @@ nav {
     background: #FFF;
     border: 2px solid #A5A5A5;
     border-radius: 10px;
-    width: 30vw;
 }
 
 .income>form>input[type="text"] {
     color: #000;
 }
 
+#secondary-button {
+    text-align: center;
+}
+
+/* MIDDLE INPUT GRID */
+#income-form {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 250px 250px;
+    gap: 10px 20px;
+
+    &>#GAI {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    &>#CaSe {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+    &>#SaWa {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    &>#SiIn {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    &>#Ben {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    &>#ACI {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+    &>#secondary-button {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border-radius: 10px;
+        padding: 0.5rem;
+        border: none;
+        width: 70px;
+        height: 40px;
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+
+        &:hover {
+            background-color: #55A8F8;
+        }
+    }
+}
+
 #primary-buttons {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border-radius: 10px;
-    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 40px;
+    padding: 20px;
     border: none;
     text-decoration: none;
-}
-
-#secondary-button {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border-radius: 10px;
-    padding: 0.5rem;
-    border: none;
-}
-
-
-
-/* Put Flex direction on the slip two buttons*/
-
-#secondary-button {
-    margin-left: 13vw;
-}
-
-.income-section1 {
-    display: flex;
-    flex-direction: row;
-    align-items: space-between;
-    gap: 1em;
-
-    & input {
-        display: flex;
-        flex-direction: column;
-        padding: 0.5em;
-        margin: 0.5em 0;
-        background: #FFF;
-        border: 2px solid #A5A5A5;
-        border-radius: 10px;
-        width: 14.3vw;
-    }
-}
-
-.income-section2 {
-    display: flex;
-    flex-direction: row;
-    align-items: space-between;
-    gap: 1em;
-    & input {
-        display: flex;
-        flex-direction: column;
-        padding: 0.5em;
-        margin: 0.5em 0;
-        background: #FFF;
-        border: 2px solid #A5A5A5;
-        border-radius: 10px;
-        width: 14.3vw;
-    }
 }
 
 .right-side {
