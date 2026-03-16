@@ -10,48 +10,58 @@
 
 <body>
 
-    <nav class="header">
+    <nav>
         <img src="eecu-logo.png" id="EECU-Logo">
         <h3>Budget Calculator</h3>
     </nav>
-
-
-    <h3>Budget Calculator</h3>
-
     <main>
         <section class="inputs">
-            <div class="progressBar">
+            <ul class="progressBar">
                 <a href="Index.html"><button class="stepOne">1</button></a>
                 <a href="Housing.html"><button class="stepTwo">2</button></a>
-                <a href="Transportation.html"><button class="stepThree">3</button></a>
+                <a href="Transportation.html"><button class="stepThree active">3</button></a>
                 <a href="Education.html"><button class="stepFour">4</button></a>
                 <a href="Personal.html"><button class="stepFive">5</button></a>
                 <a href="Savings.html"><button class="stepSix">6</button></a>
-            </div>
+            </ul>
         </section>
-        <section class="Piechart-legend">
-            <div id="Pie-chart">
-                <section class="Piechart">
+        <section class="bottom-side">
+            <section class="Piechart-legend">
+                <h4>Monthly Income</h4>
+                <ul>
+                    <li class="housing">Housing</li>
+                    <li class="transportation">Transportation</li>
+                    <li class="education">Education</li>
+                    <li class="personal">Personal</li>
+                    <li class="savings">Savings</li>
+                </ul>
+                <div id="Pie-chart">
+                    <section class="Piechart">
+                        <canvas id="budgetChart"></canvas>
+                    </section>
+                    <div class="net-income">Net Income: $...</div>
+                </div>
+            </section>
 
-                </section>
-            </div>
-        </section>
-
-        <section class="income">
-            <h2> Transportation</h2>
-            <form action="">
-                <input type="text" placeholder="Car Payment">
-                <input type="text" placeholder="Insurance">
-                <input type="text" placeholder="Repairs">
-                <input type="text" placeholder="Add Custom Item...">
-                <button id="secondary-button">+ Add</button>
-            </form>
-        </section>
-        <section class="right-side">
-            <a href="Education.html" id="primary-buttons">Continue</a>
+            <section class="income">
+                <h2>Transportation</h2>
+                <form id="income-form" action="">
+                    <input type="text" placeholder="Car Payment">
+                    <input type="text" placeholder="Insurance">
+                    <input type="text" placeholder="Repairs">
+                    <input type="text" placeholder="Gas">
+                    <input type="text" placeholder="Add Custom Item">
+                    <div class="form-actions">
+                        <button id="secondary-button">+ Add</button>
+                        <a href="Education.html" id="primary-buttons">Continue</a>
+                    </div>
+                </form>
+            </section>
         </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

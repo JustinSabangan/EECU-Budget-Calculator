@@ -17,7 +17,7 @@
     <main>
         <section class="inputs">
             <ul class="progressBar">
-                <a href="Index.html"><button class="stepOne">1</button></a>
+                <a href="Index.html"><button class="stepOne active">1</button></a>
                 <a href="Housing.html"><button class="stepTwo">2</button></a>
                 <a href="Transportation.html"><button class="stepThree">3</button></a>
                 <a href="Education.html"><button class="stepFour">4</button></a>
@@ -27,10 +27,19 @@
         </section>
         <section class="bottom-side">
             <section class="Piechart-legend">
+                <h4>Monthly Income</h4>
+                <ul>
+                    <li class="housing">Housing</li>
+                    <li class="transportation">Transportation</li>
+                    <li class="education">Education</li>
+                    <li class="personal">Personal</li>
+                    <li class="savings">Savings</li>
+                </ul>
                 <div id="Pie-chart">
                     <section class="Piechart">
-
+                        <canvas id="budgetChart"></canvas>
                     </section>
+                    <div class="net-income">Net Income: $...</div>
                 </div>
             </section>
 
@@ -39,24 +48,22 @@
                 <form id="income-form" action="">
                     <input type="text" placeholder="Gross Annual income">
                     <input type="text" placeholder="Career Selection">
-                    <section class="income-section1">
-                        <input type="text" placeholder="Salary/Wages">
-                        <input type="text" placeholder="Side Income">
-                    </section>
-                    <section class="income-section2">
-                        <input type="text" placeholder="Benefits">
-                        <input type="text" placeholder="Add Custom Item">
-                    </section>
-                    <button id="secondary-button">+ Add</button>
+                    <input type="text" placeholder="Salary/Wages">
+                    <input type="text" placeholder="Side Income">
+                    <input type="text" placeholder="Benefits">
+                    <input type="text" placeholder="Add Custom Item">
+
+                    <div class="form-actions">
+                        <button id="secondary-button">+ Add</button>
+                        <a href="Housing.html" id="primary-buttons">Continue</a>
+                    </div>
                 </form>
-            </section>
-            <section class="right-side">
-                <a href="Housing.html" id="primary-buttons">Continue</a>
             </section>
         </section>
     </main>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

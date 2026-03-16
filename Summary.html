@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Summary.css">
 </head>
+
 <body>
-    
+
     <nav class="header">
         <img src="eecu-logo.png" id="EECU-Logo">
         <h3>Budget Calculator</h3>
     </nav>
 
-    <h3>Budget Calculator</h3>
 
-   <main>
-    
-   </main>
+    <main>
+        <header>
+            <h1 class="summary-title">Your Budget Summary</h1>
+            <p class="summary-desc">Here is a complete overview of your budget.</p>
+        </header>
+        <div class="summary-flex">
+            <section class="summary-left">
+                <div class="summary-pie">
+                    <canvas id="summaryPieChart" width="240" height="240"></canvas>
+                </div>
+                <div class="summary-net" id="summaryNet">Net Income: $0.00</div>
+            </section>
+            <section class="summary-right">
+                <section class="summary-cards">
+                    <article class="summary-card">
+                        <h2>Expenses</h2>
+                        <p class="amount" id="summaryExpenses">$0.00</p>
+                    </article>
+
+                    <article class="summary-card">
+                        <h2>Remaining</h2>
+                        <p class="amount" id="summaryRemaining">$0.00</p>
+                    </article>
+                </section>
+
+                <section class="summary-text" id="summaryText">
+                </section>
+                <section class="summary-btns">
+                    <button class="summary-btn" id="summaryHomeBtn">Home</button>
+                </section>
+            </section>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

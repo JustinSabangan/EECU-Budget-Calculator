@@ -1,0 +1,230 @@
+body {
+    background: #f3f3f3;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: #1d5fa7;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    color: white;
+}
+
+#EECU-Logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+main {
+    width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 12px;
+    padding: 40px 30px 30px 30px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.summary-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+.summary-desc {
+    color: #888;
+    margin-bottom: 1.5em;
+}
+
+.summary-flex {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.summary-left {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary-pie {
+    width: 270px;
+    height: 270px;
+    margin-bottom: 18px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary-net {
+    background: #1d5fa7;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 18px 0;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.summary-cards {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 18px;
+}
+
+.summary-card {
+    flex: 1 1 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    padding: 28px 0 18px 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.summary-card .amount {
+    color: #2ecc71;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.summary-right {
+    flex: 2 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.summary-text {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+}
+.summary-text strong {
+    font-weight: bold;
+}
+.summary-text .amount {
+    color: #2ecc71;
+    font-weight: bold;
+}
+.summary-text .surplus {
+    color: #27ae60;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.summary-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+}
+.summary-btn {
+    background: #1d5fa7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 48px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s;
+}
+.summary-btn:hover {
+    background: #15508a;
+}
+
+@media (max-width: 600px) {
+
+    main {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 20px 16px 30px 16px;
+        box-shadow: none;
+    }
+
+    .summary-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .summary-desc {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .summary-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .summary-left {
+        width: 100%;
+        align-items: center;
+    }
+
+    .summary-pie {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 10px;
+    }
+
+    .summary-net {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .summary-right {
+        width: 100%;
+        align-items: center;
+    }
+
+    .summary-cards {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .summary-card {
+        width: 100%;
+        padding: 18px 0;
+    }
+
+    .summary-text {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .summary-btns {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .summary-btn {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 18px 0;
+    }
+
+    .header {
+        justify-content: center;
+        height: 80px;
+    }
+
+    #EECU-Logo {
+        height: 40px;
+    }
+}
