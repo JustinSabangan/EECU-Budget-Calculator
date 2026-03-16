@@ -25,6 +25,9 @@ nav {
 #EECU-Logo {
     height: 50px;
 }
+h3 {
+    padding-left: 20px;
+}
 
 main {
     width: 1200px;
