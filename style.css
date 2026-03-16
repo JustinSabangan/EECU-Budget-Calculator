@@ -81,6 +81,7 @@ main {
 .Piechart-legend li {
     margin: 10px 0;
     font-size: 16px;
+    justify-self: flex-start;
     position: relative;
     padding-left: 20px;
 }
